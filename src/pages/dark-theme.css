@@ -1,0 +1,31 @@
+@media (prefers-color-scheme: dark) {
+    .register input,.login input, .menu-bottom,.settings-content input{
+        border: 1px solid #2e2e2e !important;
+        background-color: #2e2e2e;
+    }
+    .register button,.login button, .menu-bottom{
+        background-color: #262626 !important;
+        color: rgb(255, 255, 255) !important;
+    }
+    .device{
+        background-color: #262626;
+        color: white;
+    }
+    .Header-Top,.Detail-Header{
+        background-color: black !important;
+    }
+    .IonTool{
+        --background:#000 !important;
+        --border-color: #000 !important;
+    }
+    .noti-btn{
+        background-color: rgb(34, 34, 34) !important;
+    }
+    .noti{
+        color: white;
+        border-top: 1px solid #1a1a1a !important;
+    }
+    .noti:last-child{
+        border-bottom: 1px solid #1a1a1a !important;
+    }
+}

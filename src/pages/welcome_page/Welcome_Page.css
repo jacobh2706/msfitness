@@ -1,0 +1,22 @@
+.wp-wrapper{
+    height: 85vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10vh;
+}
+
+.wp-wrapper img{
+    width: 60vw;
+    margin: 0 0 100px 0;
+}
+
+.credits{
+    height: 15vh;
+    color: rgb(214, 214, 214);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
