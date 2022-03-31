@@ -67,7 +67,7 @@ const Welcome_Page = () => {
                         <IonSpinner name="crescent" />
                     </div>
                 </div>
-                <div className='credits'><span>Created by</span></div>
+                <div className='credits'><span>Created by Jacob Hirsch and Philipp Stopfer</span></div>
             </IonContent>
         </IonPage>
     );
