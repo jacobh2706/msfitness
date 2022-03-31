@@ -89,11 +89,24 @@ const HomeContent = ({ isloaded, isBday }) => {
                     </IonContent>
                 </IonModal>
 
+                <IonModal
+                    trigger="trigger-button-2"
+                    swipeToClose={true}
+                >
+                    <IonHeader>
+                        <IonToolbar className='modal-toolbar'>
+                            <IonTitle size='large'>Modal Content</IonTitle>
+                        </IonToolbar>
+                    </IonHeader>
+                    <IonContent fullscreen="true" scrollY="false">
+                    </IonContent>
+                </IonModal>
+
                 <div className='card' style={{ backgroundImage: "url(" + gym_building + ")", backgroundPositionX: "center" }} id="trigger-button">
                     <div className='card-header'><h1 className='card-header-text'>Unser Studio</h1></div>
                 </div>
 
-                <div className='card' style={{ backgroundImage: "url(" + gym + ")", backgroundPositionX: "center" }}>
+                <div className='card' style={{ backgroundImage: "url(" + gym + ")", backgroundPositionX: "center" }} id="trigger-button-2">
                     <div className='card-header'><h1 className='card-header-text'>Anmeldung</h1></div>
                 </div>
 
