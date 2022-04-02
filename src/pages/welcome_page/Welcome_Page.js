@@ -63,9 +63,9 @@ const Welcome_Page = () => {
             <IonContent scrollY="false">
                 <div className='wp-wrapper'>
                     <img src={logo} onLoad={dark} style={{ opacity: "0" }} />
-                    <div className="wp-spinner">
+                    {/*<div className="wp-spinner">
                         <IonSpinner name="crescent" />
-                    </div>
+                    </div>*/}
                 </div>
                 <div className='credits'><span>Created by Jacob Hirsch and Philipp Stopfer</span></div>
             </IonContent>
