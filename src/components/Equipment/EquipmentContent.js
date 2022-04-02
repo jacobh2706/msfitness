@@ -71,7 +71,7 @@ const EquipmentContent = () => {
                 $('.device-link')[i].setAttribute('href', '../equipment/site/detail?ID=' + Elems[0][i].ID);
                 $('.device-link')[i].appendChild(document.createElement("li"));
 
-                $('.device-list li')[i].classList.add("device");
+                $('.device-list li')[i].classList.add("device ripple-parent");
                 $('.device-list li')[i].appendChild(document.createElement("div"));
 
                 $('.device-list li')[i].appendChild(document.createElement("h3"));
