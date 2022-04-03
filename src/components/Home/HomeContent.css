@@ -116,3 +116,8 @@ ion-modal {
     --background:none !important;
     --border-style:none;
 }
+
+.modal-content{
+    --padding-start: 20px;
+    --padding-end: 20px;
+}
