@@ -11,6 +11,10 @@
         background-color: #262626;
         color: white;
     }
+    .device:active{
+        transition-duration: .2s;
+        background-color: #595959;
+    }
     .Header-Top,.Detail-Header{
         background-color: black !important;
     }
