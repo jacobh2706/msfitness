@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonBadge, useIonViewWillEnter, IonModal } from '@ionic/react';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonBadge, useIonViewWillEnter, IonModal, IonText } from '@ionic/react';
 import { NavLink, Link } from 'react-router-dom';
 import './HomeContent.css';
 import gym_building from '../../images/fitness-center-kirchberg.jpeg';
@@ -86,9 +86,9 @@ const HomeContent = ({ isloaded, isBday }) => {
                         </IonToolbar>
                     </IonHeader>
                     <IonContent fullscreen="true" scrollY="false">
-                    <div>
+                        <IonText>
                             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                        </div>
+                        </IonText>
                     </IonContent>
                 </IonModal>
 
@@ -102,9 +102,9 @@ const HomeContent = ({ isloaded, isBday }) => {
                         </IonToolbar>
                     </IonHeader>
                     <IonContent fullscreen="true" scrollY="false">
-                        <div>
+                        <IonText>
                             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                        </div>
+                        </IonText>
                     </IonContent>
                 </IonModal>
 
