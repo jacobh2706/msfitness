@@ -13,7 +13,7 @@
     }
     .device:active{
         transition-duration: .2s;
-        background-color: #595959;
+        background-color: #595959 !important;
     }
     .Header-Top,.Detail-Header{
         background-color: black !important;
