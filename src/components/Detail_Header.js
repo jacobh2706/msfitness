@@ -1,14 +1,14 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonButtons, IonToolbar, IonBackButton, IonButton } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonButtons, IonToolbar, IonBackButton, IonButton, IonLoading } from '@ionic/react';
 import { NavLink } from 'react-router-dom';
 import React, { useState, useEffect, } from 'react';
 import ReactDOM from 'react-dom';
 
 import './Detail_Header.css';
-import {updateData} from './Equipment/DetailContent';
+import { updateData } from './Equipment/DetailContent';
 
 const Detail_Header = ({ site_title }) => {
     const [isAdmin, setIsAdmin] = useState(false);
-
+    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
         if (localStorage.getItem("user-role") == "ADMIN") {
@@ -25,6 +25,7 @@ const Detail_Header = ({ site_title }) => {
     const endEditMode = () => {
         localStorage.removeItem("EditMode");
         console.log("Edit Mode wurde deaktiviert");
+        setIsLoading(true);
         updateData();
     }
 
@@ -47,6 +48,11 @@ const Detail_Header = ({ site_title }) => {
                         <IonButton onClick={endEditMode}>Fertig</IonButton>
                     </IonButtons>}
             </IonToolbar>
+
+            <IonLoading
+                isOpen={isLoading}
+                message={'Wird aktualisiert...'}
+            />
         </IonHeader>
     );
 };
