@@ -32,8 +32,8 @@
     font-size: 14px;
 }
 
-ion-button{
-    margin: 30px 0 0 0 !important;
+.settings-content ion-button{
+    margin-top: 30px !important;
 }
 
 .log-out-wrapper{
