@@ -1,5 +1,5 @@
 @media (prefers-color-scheme: dark) {
-    .register input,.login input, .menu-bottom,.settings-content input, .detail-content-edit textarea, .detail-content-edit textarea{
+    .register input,.login input, .menu-bottom,.settings-content input, .detail-content-edit textarea, .detail-content-edit textarea,.detail-content-edit input{
         border: 1px solid #2e2e2e !important;
         background-color: #2e2e2e;
     }

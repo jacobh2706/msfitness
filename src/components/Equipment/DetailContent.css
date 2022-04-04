@@ -22,14 +22,16 @@
     font-size: 30px;
 }
 
-.detail-content-edit textarea{
+.detail-content-edit textarea, .detail-content-edit input{
     border:0;
     border: 1px solid #DDDDDD;
     border-radius: 10px;
     width: 100%;
     height: 250px;
     padding: 10px !important;
-    overflow-y: hidden !important;
     padding: 0 0 0 10px;
     resize: none;
+}
+.detail-content-edit input{
+    height: 50px;
 }

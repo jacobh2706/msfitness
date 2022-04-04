@@ -15,6 +15,7 @@ const Equipment_Detail = () => {
     const [descr, setDescr] = useState('');
     const [videoLink, setVideoLink] = useState('');
     const [isLoaded, setIsLoaded] = useState(false);
+    const [id, setID] = useState('');
 
 
     useEffect(() => {
@@ -32,6 +33,7 @@ const Equipment_Detail = () => {
     })
 
     const getdata = (data) => {
+        setID(data[0].ID)
         setTitle(data[0].NAME);
         setDescr(data[0].DESCR);
         setVideoLink(data[0].LINK);
@@ -44,7 +46,7 @@ const Equipment_Detail = () => {
     return (
         <IonPage>
             {isLoaded && (<Detail_Header site_title={title} />)}
-            {isLoaded && (<DetailContent site_title={title} site_descr={descr} video_link={videoLink}/>)}
+            {isLoaded && (<DetailContent site_title={title} site_descr={descr} video_link={videoLink} site_id={id}/>)}
         </IonPage>
     );
 };
