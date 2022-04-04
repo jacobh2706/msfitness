@@ -8,11 +8,11 @@ const Detail_Header = ({ site_title }) => {
         <IonHeader>
             <IonToolbar>
                 <IonButtons slot="start">
-                    <IonBackButton style={{ width: 'min-content' }} className='back-button' defaultHref="../Equipment" />
+                    <IonBackButton defaultHref="../Equipment" />
                 </IonButtons>
                 <IonTitle>{site_title}</IonTitle>
-                <IonButtons slot="end">
-                    <IonButton style={{ width: 'max-content' }}>Bearbeiten</IonButton>
+                <IonButtons slot="primary">
+                    <IonButton>Bearbeiten</IonButton>
                 </IonButtons>
             </IonToolbar>
         </IonHeader>
