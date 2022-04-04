@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButtons } from '@ionic/react';
 import React, { useEffect } from 'react';
 import ReactPlayer from 'react-player'
 import video from '../../images/Rum_kreuzheben.mov';
