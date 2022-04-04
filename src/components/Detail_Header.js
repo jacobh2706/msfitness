@@ -22,7 +22,7 @@ const Detail_Header = ({ site_title }) => {
     }
 
     const endEditMode = () => {
-        localStorage.setItem("EditMode", false);
+        localStorage.removeItem("EditMode");
         console.log("Edit Mode deaktiviert");
         window.location.reload(true);
     }
@@ -36,7 +36,7 @@ const Detail_Header = ({ site_title }) => {
                 <IonTitle>{site_title}</IonTitle>
                 
                 {isAdmin && 
-                 localStorage.getItem("EditMode") == "false" && 
+                 localStorage.getItem("EditMode") == null && 
                 <IonButtons slot="primary">
                     <IonButton onClick={activateEditMode}>Bearbeiten</IonButton>
                 </IonButtons>}
