@@ -32,9 +32,10 @@ const Detail_Header = ({ site_title }) => {
     return (
         <IonHeader>
             <IonToolbar>
-                <IonButtons slot="start">
-                    <IonBackButton defaultHref="../Equipment" />
-                </IonButtons>
+                {localStorage.getItem("EditMode") == null &&
+                    <IonButtons slot="start">
+                        <IonBackButton defaultHref="../Equipment" />
+                    </IonButtons>}
                 <IonTitle>{site_title}</IonTitle>
 
                 {isAdmin &&
