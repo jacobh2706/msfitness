@@ -18,7 +18,7 @@ const NotiHeader = ({ site_title }) => {
                 <IonButtons slot="start"><IonBackButton style={{ width: 'min-content' }} className='back-button' defaultHref='../home/Home' /></IonButtons>
                 <IonTitle>{site_title}</IonTitle>
                 {isAdmin && <IonButtons slot="primary">
-                    <IonButton onClick={() => setShowAlert(true)}>+</IonButton>
+                    <IonButton onClick={() => setShowAlert(true)}>Neue Nachricht</IonButton>
                 </IonButtons>}
             </IonToolbar>
 
