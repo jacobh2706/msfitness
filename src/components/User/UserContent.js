@@ -33,7 +33,7 @@ const Settings_Content = () => {
                             <IonLabel>Benutzer</IonLabel>
                         </IonSegmentButton>
                         <IonSegmentButton value="admin-area">
-                            <IonLabel>Admin Bereich</IonLabel>
+                            <IonLabel>Admin</IonLabel>
                         </IonSegmentButton>
                     </IonSegment>
                 }
