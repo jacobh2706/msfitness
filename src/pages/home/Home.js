@@ -22,6 +22,9 @@ const Home = () => {
     const date = new Date();
 
     useEffect(async () => {
+        console.log("--- Wilkommen in der MS Fitness Konsole ---");
+        console.log("Sie sind angemeldet als: " + localStorage.getItem("user-firstname"));
+
         axios.post("https://msfitness-17584.nodechef.com/getuserdata", {
             token: localStorage.getItem('user-token'),
         }).then((response) => {
@@ -41,27 +44,27 @@ const Home = () => {
         axios.get('https://msfitness-17584.nodechef.com/getNotification').then((result) => {
             Elems = [];
             Elems.push(result.data);
-            console.log("Datenbank" + Elems[0].length);
-            console.log("Lokal" + localStorage.getItem("notification-count"));
+            console.log("Nachrichten in der Datenbank: " + Elems[0].length);
+            console.log("Nachrichten lokal auf dem Gerät: " + localStorage.getItem("notification-count"));
             if (Elems[0].length != localStorage.getItem("notification-count")) {
                 localStorage.setItem("newNotiCount", Elems[0].length - localStorage.getItem("notification-count"));
-                console.log("Neue nachrichten!");
+                console.log("Es gibt neue nachrichten!");
                 setisloaded(true);
             } else {
                 localStorage.setItem("newNotiCount", "0");
-                console.log("Keine neuen Nachrichten");
+                console.log("Es gibt keine neuen Nachrichten.");
                 setisloaded(true);
             }
         });
     });
 
     const checkBirthday = () => {
-        console.log(moment().format('YYYY-MM-DD'));
+        console.log("Der heutige Tag: " + moment().format('YYYY-MM-DD'));
         if (moment().format('YYYY-MM-DD') == localStorage.getItem('user-birthday')) {
-            console.log("bday");
+            console.log("Der User " + localStorage.getItem("user-firstname") + " hat heute Geburtstag! Gratulieren Sie ihm.");
             setIsBday(true);
         } else {
-            console.log("kein bday");
+            console.log("Der User " + localStorage.getItem("user-firstname") + " hat heute nicht Geburtstag");
             setIsBday(false);
         }
     }

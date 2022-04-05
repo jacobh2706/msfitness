@@ -22,12 +22,10 @@ const Equipment_Detail = () => {
         var url_string = window.location;
         var url = new URL(url_string);
         var ID = url.searchParams.get("ID");
-        console.log("ID:", ID);
 
         axios.post('https://msfitness-17584.nodechef.com/getEquipmentDetail', {
             ID: ID
         }).then((result) => {
-            console.log(title);
             getdata(result.data); 
         });
     })
@@ -37,7 +35,6 @@ const Equipment_Detail = () => {
         setTitle(data[0].NAME);
         setDescr(data[0].DESCR);
         setVideoLink(data[0].LINK);
-        console.log(title);
 
         setIsLoaded(true);        
     }

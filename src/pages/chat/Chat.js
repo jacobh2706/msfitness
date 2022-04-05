@@ -6,6 +6,7 @@ import Header from '../../components/Header';
 import Menu from '../../components/Menu';
 
 const Chat = () => {
+
     return (
         <IonPage>
             <Header site_title={"Chat"} />

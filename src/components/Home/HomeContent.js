@@ -42,20 +42,16 @@ const HomeContent = ({ isloaded, isBday }) => {
         }
 
         setTimeout(() => {
-            console.log("fired");
             console.log("Ungelesene Nachrichten: " + localStorage.getItem("newNotiCount"));
 
-            console.log(isloaded);
             if (localStorage.getItem("newNotiCount") != "0") {
-                console.log("anzeigen");
+                console.log("Es werden " + localStorage.getItem("newNotiCount") + " neue Nachrichten angezeigt.");
                 Badge.set(localStorage.getItem("newNotiCount"));
                 setNotiNotNull(true);
             } else {
-                console.log("nicht anzeigen");
+                console.log("Es werden keine neuen Nachrichten angezeigt.");
                 setNotiNotNull(false);
             }
-
-            console.log("fired2");
         }, 500);
     });
 

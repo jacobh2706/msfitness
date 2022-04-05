@@ -14,10 +14,10 @@ const DetailContent = ({ site_title, site_descr, video_link, site_id }) => {
     useEffect(() => {
         if (localStorage.getItem("EditMode") == "true") {
             setEditMode(true);
-            console.log("editmode")
+            console.log("EditMode ON")
         } else {
             setEditMode(false);
-            console.log("editmode off")
+            console.log("EditMode OFF")
         }
     });
 
@@ -46,6 +46,7 @@ const DetailContent = ({ site_title, site_descr, video_link, site_id }) => {
 
             {editMode &&
                 <div className='detail-content-edit'>
+                    <h1>Text</h1>
                     <textarea defaultValue={site_descr}></textarea>
                     <h1>Video</h1>
                     <input defaultValue={video_link} id='link-input'></input>

@@ -4,7 +4,7 @@ import './Header-Settings.css';
 import log_out from '../images/log-out.png';
 
 
-const Header_Settings = ({site_title}) => {
+const Header_Settings = ({ site_title }) => {
     return (
         <IonHeader>
             <IonToolbar className="IonTool">
