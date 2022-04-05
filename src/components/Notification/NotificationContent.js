@@ -82,7 +82,9 @@ const NotiContent = () => {
             <IonHeader collapse="condense">
                 <IonToolbar>
                     <IonTitle size="large">Mitteilungen 🔔</IonTitle>
-                    {isAdmin && <IonButton slot='end' onClick={() => setShowAlert(true)}>+</IonButton>}
+                    {isAdmin && <IonButtons slot="primary">
+                        <IonButton slot='end' onClick={() => setShowAlert(true)}>+</IonButton>
+                    </IonButtons>}
                 </IonToolbar>
             </IonHeader>
 
