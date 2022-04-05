@@ -79,3 +79,13 @@ ion-segment {
 .user-content{
     padding: 20px 20px 0 20px;
 }
+
+ion-spinner{
+    position: relative;
+    top: 50%;
+    left: 47%;
+}
+
+.user-role{
+    color: #EF5D50 !important;
+}
