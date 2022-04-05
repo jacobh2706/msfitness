@@ -27,7 +27,7 @@
 .flex-wrapper p,
 .settings-content p {
     margin: 0 0 10px 0;
-    color: #8E8E8E;
+    color: #9f9f9f;
     width: 80vw;
     font-size: 14px;
 }
@@ -56,15 +56,6 @@ ion-segment {
 .user-list {
     list-style: none;
     padding: 0;
-}
-
-.user-content p {
-    opacity: .5;
-    margin: 0;
-}
-
-.user-content h2 {
-    margin: 0;
 }
 
 .user-content{
