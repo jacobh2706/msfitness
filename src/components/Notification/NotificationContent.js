@@ -42,14 +42,9 @@ function doRefresh(RefresherEventDetail) {
 const NotiContent = () => {
     const [showAlert, setShowAlert] = useState(false);
     const [searchText, setSearchText] = useState('');
-    const [isAdmin, setIsAdmin] = useState(false);
     var Elems = []
 
     useEffect(() => {
-        if (localStorage.getItem("user-role") == "ADMIN") {
-            setIsAdmin(true);
-        }
-
         localStorage.setItem("newNotiCount", 0);
         Badge.clear();
 
@@ -82,52 +77,8 @@ const NotiContent = () => {
             <IonHeader collapse="condense">
                 <IonToolbar>
                     <IonTitle size="large">Mitteilungen 🔔</IonTitle>
-                    {isAdmin && <IonButtons slot="primary">
-                        <IonButton slot='end' onClick={() => setShowAlert(true)}>+</IonButton>
-                    </IonButtons>}
                 </IonToolbar>
             </IonHeader>
-
-            <IonAlert
-                isOpen={showAlert}
-                onDidDismiss={() => setShowAlert(false)}
-                cssClass='my-custom-class'
-                header={'Neue Nachricht teilen'}
-                inputs={[
-                    {
-                        name: 'notiheader',
-                        type: 'text',
-                        placeholder: 'Überschrift'
-                    },
-                    {
-                        name: 'notitext',
-                        type: 'text',
-                        placeholder: 'Text'
-                    }]}
-                buttons={[
-                    {
-                        text: 'Abbruch',
-                        role: 'cancel',
-                        cssClass: 'secondary',
-                        handler: () => {
-                            console.log('Confirm Cancel');
-                        }
-                    },
-                    {
-                        text: 'Teilen',
-                        handler: (alertdata) => {
-                            console.log('Confirm Ok');
-                            console.log(alertdata.notiheader);
-                            axios.post('http://msfitness-17584.nodechef.com/createNotification', {
-                                header: alertdata.notiheader,
-                                text: alertdata.notitext,
-                            }).then((result) => {
-                                console.log(result);
-                            });
-                        }
-                    }
-                ]}
-            ></IonAlert>
 
             <IonRefresher slot="fixed" onIonRefresh={doRefresh}>
                 <IonRefresherContent></IonRefresherContent>
