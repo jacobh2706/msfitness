@@ -3,6 +3,7 @@ import './UserContent.css';
 import axios from 'axios';
 import ReactDOM from 'react-dom';
 import UserSettings from './UserSettings';
+import AdminSettings from './AdminSettings';
 import { useState, useEffect } from 'react';
 
 const Settings_Content = () => {
@@ -18,7 +19,7 @@ const Settings_Content = () => {
         if (e.detail.value == "settings")
             ReactDOM.render(<UserSettings />, document.getElementById('settings-content'));
         else if (e.detail.value == "admin-area")
-            ReactDOM.render(<div>Admin Bereich</div>, document.getElementById('settings-content'));
+            ReactDOM.render(<AdminSettings />, document.getElementById('settings-content'));
     }
 
     return (

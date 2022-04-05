@@ -1,23 +1,22 @@
-.settings-content{
+.settings-content {
     display: flex;
     flex-direction: column;
     height: 70vh;
     width: 100vw;
-    padding: 20px 20px 0 20px;
 }
 
-.flex-wrapper{
+.flex-wrapper {
     display: flex;
     justify-content: space-between;
     margin: 0 0 20px 0;
 }
 
-.flex-wrapper div{
+.flex-wrapper div {
     width: 45%;
 }
 
-.settings-content input{
-    border:0;
+.settings-content input {
+    border: 0;
     border: 1px solid #DDDDDD;
     border-radius: 10px;
     width: 100%;
@@ -25,30 +24,58 @@
     padding: 0 0 0 10px;
 }
 
-.flex-wrapper p, .settings-content p{
+.flex-wrapper p,
+.settings-content p {
     margin: 0 0 10px 0;
     color: #8E8E8E;
     width: 80vw;
     font-size: 14px;
 }
 
-.settings-content ion-button{
+.settings-content ion-button {
     margin-top: 30px !important;
 }
 
-.log-out-wrapper{
+.log-out-wrapper {
     display: flex;
     flex-direction: column;
-    flex:5;
+    flex: 5;
     justify-content: flex-end;
 }
 
-.user-header{
+.user-header {
     --background: none;
     --border-color: transparent;
 }
 
-ion-segment{
+ion-segment {
     width: 50%;
     margin: auto;
+}
+
+.user-list {
+    list-style: none;
+    padding: 0;
+}
+
+.user-content p {
+    opacity: .5;
+    margin: 0;
+}
+
+.user-content h2 {
+    margin: 0;
+}
+
+.user-content{
+    margin: 0 0 20px 0;
+}
+
+.admin-content{
+    --padding-top:0;
+    --padding-start:0;
+}
+
+.user-content{
+    padding: 20px 20px 0 20px;
 }

@@ -42,7 +42,7 @@ const User_Settings = () => {
     }
 
     return (
-        <div slot="fixed">
+        <div slot="fixed" className='user-content'>
             <div className='flex-wrapper'>
                 <div>
                     <p>Vorname</p>
