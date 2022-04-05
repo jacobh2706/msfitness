@@ -47,3 +47,8 @@
     --background: none;
     --border-color: transparent;
 }
+
+ion-segment{
+    width: 50%;
+    margin: auto;
+}
