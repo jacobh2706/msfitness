@@ -1,9 +1,8 @@
-import { IonContent, IonRefresher, IonRefresherContent, IonSearchbar, IonToolbar, IonTitle, IonHeader } from '@ionic/react';
-import React, { useState, useEffect, createElement, Children } from 'react';
-import { chevronDownCircleOutline } from 'ionicons/icons';
-import { RefresherEventDetail } from '@ionic/core';
+import { IonContent, IonRefresher, IonRefresherContent, IonSearchbar, IonToolbar, IonTitle, IonHeader, IonSpinner } from '@ionic/react';
+import React, { useState, useEffect} from 'react';
 import './EquipmentContent.css';
 import axios from 'axios';
+import ReactDOM from 'react-dom';
 
 import $ from 'jquery';
 import { Keyboard } from '@capacitor/keyboard';
@@ -57,9 +56,17 @@ const EquipmentContent = () => {
     }, [searchText]);
 
     const showAll = () => {
+        ReactDOM.render(
+            <IonSpinner />,
+            document.getElementById('device-list-wrapper')
+        );
         axios.get('https://msfitness-17584.nodechef.com/getEquipment').then((result) => {
             Elems.push(result.data);
-            console.log(Elems);
+            ReactDOM.render(
+                <ul className='device-list'>
+                </ul>,
+                document.getElementById('device-list-wrapper')
+            );
             $('.device-list')[0].remove();
             $('.device-list-wrapper')[0].appendChild(document.createElement("ul"));
             $('.device-list-wrapper ul')[0].classList.add("device-list");
@@ -128,9 +135,7 @@ const EquipmentContent = () => {
             <IonRefresher slot="fixed" onIonRefresh={doRefresh}>
                 <IonRefresherContent></IonRefresherContent>
             </IonRefresher>
-            <div className='device-list-wrapper'>
-                <ul className='device-list'>
-                </ul>
+            <div className='device-list-wrapper' id="device-list-wrapper">
             </div>
         </IonContent>
     );

@@ -1,8 +1,9 @@
-import { IonContent, IonRefresher, IonRefresherContent, IonButton, IonToolbar, IonHeader, IonTitle, IonAlert } from '@ionic/react';
+import { IonContent, IonRefresher, IonRefresherContent, IonSpinner, IonToolbar, IonHeader, IonTitle, IonAlert } from '@ionic/react';
 import { Link } from 'react-router-dom';
-import React, { useState, useEffect, createElement, Children } from 'react';
+import React, { useState, useEffect } from 'react';
 import './NotificationContent.css';
 import axios from 'axios';
+import ReactDOM from 'react-dom';
 
 import $ from 'jquery';
 import moment from 'moment';
@@ -48,7 +49,16 @@ const NotiContent = () => {
         localStorage.setItem("newNotiCount", 0);
         Badge.clear();
 
+        ReactDOM.render(
+            <IonSpinner />,
+            document.getElementById('noti-list-wrapper')
+        );
         axios.get('https://msfitness-17584.nodechef.com/getNotification').then((result) => {
+            ReactDOM.render(
+                <ul className='noti-list'>
+                </ul>,
+                document.getElementById('noti-list-wrapper')
+            );
             $('.noti-list')[0].remove();
             $('.noti-list-wrapper')[0].appendChild(document.createElement("ul"));
             $('.noti-list-wrapper ul')[0].classList.add("noti-list");
@@ -84,9 +94,7 @@ const NotiContent = () => {
                 <IonRefresherContent></IonRefresherContent>
             </IonRefresher>
             <div style={{ width: "100vw" }}>
-                <div className='noti-list-wrapper'>
-                    <ul className='noti-list'>
-                    </ul>
+                <div className='noti-list-wrapper' id="noti-list-wrapper">
                 </div>
             </div>
         </IonContent>
