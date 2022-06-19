@@ -6,7 +6,7 @@ import Header from '../../components/Header';
 import Menu from '../../components/Menu';
 
 import Lottie from "lottie-react";
-import groovyWalkAnimation from "./groovyWalk.json";
+import underConstruction from "./under-construction.json";
 
 const Chat = () => {
 
@@ -19,7 +19,7 @@ const Chat = () => {
                         <IonTitle size="large">Chat</IonTitle>
                     </IonToolbar>
                 </IonHeader>
-                <Lottie animationData={groovyWalkAnimation} loop={true} />
+                <Lottie animationData={underConstruction} loop={true} />
             </IonContent>
             <Menu />
         </IonPage>
