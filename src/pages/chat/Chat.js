@@ -5,6 +5,9 @@ import '../dark-theme.css';
 import Header from '../../components/Header';
 import Menu from '../../components/Menu';
 
+import Lottie from "lottie-react";
+import groovyWalkAnimation from "./groovyWalk.json";
+
 const Chat = () => {
 
     return (
@@ -16,7 +19,7 @@ const Chat = () => {
                         <IonTitle size="large">Chat</IonTitle>
                     </IonToolbar>
                 </IonHeader>
-                <p>Coming soon...</p>
+                <Lottie animationData={groovyWalkAnimation} />
             </IonContent>
             <Menu />
         </IonPage>
