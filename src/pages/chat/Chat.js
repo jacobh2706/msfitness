@@ -19,7 +19,7 @@ const Chat = () => {
                         <IonTitle size="large">Chat</IonTitle>
                     </IonToolbar>
                 </IonHeader>
-                <Lottie animationData={groovyWalkAnimation} />
+                <Lottie animationData={groovyWalkAnimation} loop={true} />
             </IonContent>
             <Menu />
         </IonPage>
